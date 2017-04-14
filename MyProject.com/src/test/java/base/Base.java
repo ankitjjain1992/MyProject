@@ -1,5 +1,7 @@
 package base;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -14,7 +16,8 @@ public class Base {
 		//driver= new RemoteWebDriver(DesiredCapabilities.firefox());
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.google.co.in");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("http://newtours.demoaut.com/");
 	}
 	@AfterClass
 	public void PostCondition()

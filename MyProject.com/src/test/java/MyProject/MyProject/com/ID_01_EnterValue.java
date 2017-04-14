@@ -8,9 +8,14 @@ public class ID_01_EnterValue extends Base {
 
 	
 	@Test
-	public void testID_01_EnterValue()
+	public void testID_01_EnterValue() throws InterruptedException
 	{
+		loginPage lp = new loginPage(driver);
+		lp.Login("mercury", "mercury");
 		homePage h= new homePage(driver);
-		h.Entertext("Ankit jain");
+		
+		Thread.sleep(2000);
+		
+		
 	}
 }

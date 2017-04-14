@@ -15,8 +15,10 @@ public class homePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void Entertext(String value)
+	public void Entertext(String value) throws InterruptedException
 	{
-		textbox.sendKeys(value,Keys.ENTER);
+		textbox.sendKeys(value);
+		Thread.sleep(2000);
+		textbox.sendKeys(Keys.ENTER);
 	}
 }
