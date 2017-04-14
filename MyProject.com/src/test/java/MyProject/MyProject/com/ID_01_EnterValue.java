@@ -12,7 +12,7 @@ public class ID_01_EnterValue extends Base {
 	{
 		loginPage lp = new loginPage(driver);
 		lp.Login("mercury", "mercury");
-		homePage h= new homePage(driver);
+		
 		
 		Thread.sleep(2000);
 		

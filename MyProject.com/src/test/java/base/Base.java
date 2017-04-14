@@ -13,11 +13,10 @@ public class Base {
 	public void Precondition()
 	{
 		System.setProperty("webdriver.gecko.driver", "C:/Users/ankit.a.jai/Downloads/geckodriver-v0.15.0-win64/geckodriver.exe");
-		//driver= new RemoteWebDriver(DesiredCapabilities.firefox());
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://newtours.demoaut.com/");
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	@AfterClass
 	public void PostCondition()
