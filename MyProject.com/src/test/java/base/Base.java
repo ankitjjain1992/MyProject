@@ -16,7 +16,7 @@ public class Base {
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://newtours.demoaut.com/");
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 	}
 	@AfterClass
 	public void PostCondition()
